@@ -1,0 +1,231 @@
+/**
+ * @file
+ *	
+ *	Contains admin styles
+ */
+
+@import "rounded";
+@import "gradient";
+
+.wrap { 
+
+	position: relative;
+
+	.pagetitle {
+		overflow: hidden;
+
+		.description {
+			float: left;
+			margin-top: 8px;
+			width: 75%;
+		}
+	}
+
+	#icon-features {
+	 	background: transparent url('../img/ic_page_features.png') no-repeat 0 0;
+	}
+	
+	h2 {
+		text-transform:capitalize;
+
+		.btn {
+			@include rounded( 3px );
+			background: #f1f1f1;
+			margin-left: 4px;
+			padding: 3px 8px;
+			position: relative;
+			top: -3px;
+			text-decoration: none;
+			font-size: 12px;
+			border: 0 none;
+		}
+
+	}
+
+	div.success, div.error, div.warning, div.confirm {
+		@include rounded( 3px );
+		
+		text-align: center;
+		margin: 7px 0px 0px 0px;
+		padding: 8px 10px 7px;
+	}
+
+	div.message, div.success {
+		background: #dff2bf;
+		border: 1px solid #4f8a10;
+		color: #4f8a10 - #555;
+	}
+
+	div.error {
+		background: #ff9191;
+		border: 1px solid #d51500;
+		color: #d51500 - #555;
+	}
+
+	div.warning {
+		background: #feefb3;
+		border: 1px solid #9f6000;
+		color: #9f6000 - #555;
+	}
+
+	div.confirm {
+		margin-top: 15px;
+		background: #f0f0f0;
+		border: 1px solid #d5d5d5;
+		text-align: left;
+		color: #5b5b5b;
+	}
+
+}
+
+
+#features {
+
+	border: 1px solid #d5d5d5;
+	margin: 10px 0px;
+
+	li {
+
+		margin: 0px;
+		background: #F9F9F9;
+		overflow: hidden;
+
+		&:nth-child(odd) {
+			background: white;
+		}
+
+		&.list-header {
+
+			@include gradient( #F9F9F9, #ECECEC, #ECECEC );
+
+			color: #333;
+			font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+			font-size: 14px;
+			line-height: 1.3em;
+
+			.column {
+				padding: 7px 0px;
+			}
+		}
+
+		.column {
+			padding: 5px 0px;
+			height: 20px;
+			line-height: 20px;
+			overflow: hidden;
+			float: left;
+			border: 1px solid #d5d5d5;
+			border-top-color: white;
+			border-left: none;
+			border-right: none;
+			white-space: nowrap;
+
+			.inner {
+				padding: 0px 8px 0px 15px;
+			}
+
+		}
+
+		.title {
+			width: 60%;
+		}
+
+		.author {
+			width: 15%;
+		}
+
+		.date {
+			width: 15%;
+		}
+
+		.actions, .actions {	 
+			width: 10%;
+			text-align: center;
+			background: #ececec;
+		}
+	}
+}
+
+
+form {
+
+ 	fieldset {
+ 		margin-top: 17px;
+ 		border-top: 1px solid #EEE;
+
+ 		h3 {
+ 			font-size: 1.6em;
+ 			font-weight: normal;
+ 		}
+
+ 		.field-wrapper {
+ 			position: relative;
+ 			padding-left: 200px;
+ 			margin-top: 20px;
+ 			width: 600px;
+
+ 			label {
+ 				position: absolute;
+ 				top: 2px;
+ 				left: 2px;
+ 				font-weight: bold;
+ 			}
+
+ 			.description {
+ 				line-height: 22px;
+ 				width: 480px;
+ 			}
+
+ 			input[type="text"], textarea {
+ 				width: 480px;
+ 			}
+
+ 			.checkboxes {
+
+ 				overflow: hidden;
+
+ 				&.horizontal {
+ 					span {
+		 				float: left;
+		 			}
+ 				}
+
+ 				&.vertical {
+ 					
+ 				}
+
+ 				span {
+					display: block;
+	 				margin: 3px 0px;
+	 				margin-right: 15px;
+	 			}
+
+	 			input[type="checkbox"] {
+	 				margin-right: 4px;
+	 			}	
+	 		}
+
+ 			a.remove {
+ 				border-right: 1px solid #d5d5d5;
+ 				text-decoration: none;
+ 				padding:0px 4px;
+ 				margin-right: 5px;
+
+ 				&:hover {
+ 					background: #fff;
+ 				}
+ 			}
+
+ 		} // field-wrapper
+ 	} // fieldset
+}
+
+.submitbox {
+
+	width: 680px;
+	padding-top: 15px;
+
+	.submitdelete {
+		float: right;
+	}
+}

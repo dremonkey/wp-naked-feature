@@ -1,0 +1,11 @@
+// =========================================================================================
+// Gradient Mixin
+// =========================================================================================
+
+@mixin gradient($start_color, $end_color, $default_color) {
+	background: $default_color;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $start_color), color-stop(1, $end_color) );
+	background-image: -moz-linear-gradient( center top, $start_color 0%, $end_color 100% );
+  	filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='"+$start_color+"', endColorstr='"+$end_color+"')"; /* ie7 */
+  	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='"+$start_color+"', endColorstr='"+$end_color+"')"; /* ie8 */
+}
