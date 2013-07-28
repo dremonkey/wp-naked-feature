@@ -4,5 +4,8 @@ Feature post plugin for Wordpress. This was developed for [soompi.com](www.soomp
 
 Please contact me if you plan on using it so that I can explain what works and what doesn't.
 
+## Dependencies
+- [naked-utils](https://github.com/dremonkey/wp-naked-utils)
+
 ## License
 MIT
